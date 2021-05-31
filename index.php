@@ -1,8 +1,39 @@
 <?php
-	$paragrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
 
-   $paragrafo2 = str_replace($_GET["badword"], "***", $paragrafo);
 
+$partite = [
+    [
+        "squadraCasa" => "Varese",
+        "puntifattiSC" => rand(30,100),
+        "squadraOspite" => "Fortitudo",
+        "puntifattiSO" => rand(30,100),
+
+    ],
+    [
+        "squadraCasa" => "Milano",
+        "puntifattiSC" => rand(30,100),
+        "squadraOspite" => "Olimpia",
+        "puntifattiSO" => rand(30,100),
+
+    ],
+    [
+        "squadraCasa" => "Roma",
+        "puntifattiSC" => rand(30,100),
+        "squadraOspite" => "Cantu",
+        "puntifattiSO" => rand(30,100),
+
+    ],
+    [
+        "squadraCasa" => "Pesaro",
+        "puntifattiSC" => rand(30,100),
+        "squadraOspite" => "Venezia",
+        "puntifattiSO" => rand(30,100),
+
+    ],
+
+
+
+];
 
 ?>
 
@@ -15,18 +46,13 @@
     <title>Document</title>
 </head>
 <body>
-<p>
-<?php echo $paragrafo2 ?>
-</p>
-
-<p>
-<?php echo "<br>" ?> 
-</p>
-
-<p>
-<?php echo strlen($paragrafo2) ?> 
-</p>
-
-
+<?php
+     for ($i = 0; $i < count($partite); $i++)  {
+        echo '<ul>';
+        echo '<li>'; echo $partite[$i]["squadraCasa"] . " - " . $partite[$i]["squadraOspite"] . " | ". $partite[$i]["puntifattiSC"] ." - " . $partite[$i]["puntifattiSO"];
+        echo '</li>';
+        echo '</ul>';
+    }  
+        ?>    
 </body>
 </html>
