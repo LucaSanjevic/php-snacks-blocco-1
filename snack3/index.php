@@ -56,19 +56,7 @@ $array = [
 
 <body>
     <?php
-    $keyslist = array_keys($posts);
-
-    foreach ($keyslist as $key) {
-
-        $singleDayPosts = $posts[$key];
-    
-        $singleDayPosts_len = count($singleDayPosts);
-    
-        for ($i = 0; $i < $singleDayPosts_len; $i++) {
-
-                <h4> echo $singleDayPosts[$i]["title"]; </h4>
-                <p> echo $singleDayPosts[$i]["author"]; </p>
-                <p> echo $singleDayPosts[$i]["text"]; </p>
+   
         }
     }
             ?>
