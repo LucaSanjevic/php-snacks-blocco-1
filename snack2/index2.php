@@ -5,7 +5,7 @@ $age = $_GET["age"];
 
 $word = ".";
 
-if (strlen($name) <= 3 && strpos($mail, $word) == true && is_numeric($age)) 
+if (strlen($name) <= 3 && strpos($mail, $word) === true && is_numeric($age)) 
 {
 $accesso = "Accesso Riuscito";
 }

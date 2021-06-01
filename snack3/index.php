@@ -56,8 +56,34 @@ $array = [
 
 <body>
     <?php
-   
-        }
+
+$keysMap = array_keys($array);
+
+
+    for($i = 0; $i < count($array); $i++) {
+$key = $keysMap[$i];
+$value = $array[$key];
+
+echo "<li>" . $key;
+
+echo "<ul>";
+
+for($y=0; $y< count($value); $y++) {
+    $singlePost = $value[$y];
+
+    echo "<li>";
+
+    echo "<strong>" . $singlePost["title"] . "</strong><br>";
+    echo "<em>" . $singlePost["title"] . "</em><br>";
+    echo "<p>" . $singlePost["text"] . "</p><br>";
+    
+    
+
+    echo "</li>";
+}
+echo "</ul>";
+echo "</li>";
+
     }
             ?>
 </body>

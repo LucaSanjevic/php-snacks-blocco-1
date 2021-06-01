@@ -8,7 +8,7 @@ for ($i = 0; $i < 15; $i++) {
     
     if (in_array($numeroRandom, $array))
       {
-    
+     $i--;
       }
     else
       {
